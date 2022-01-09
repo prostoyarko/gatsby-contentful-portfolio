@@ -30,4 +30,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
       - run: ls -la
-      - run: aws s3 sync ./public s3://bucket-243be4b
+      - run: aws s3 sync ./public s3://s3-website-bucket-145cfc3
