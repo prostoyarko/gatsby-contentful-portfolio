@@ -36,10 +36,10 @@ jobs:
       - name: Create env file
         run: | 
           cat .key
-          (echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"; echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"; echo "MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT" ) >> .env
+          (echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"; echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"; echo "MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT" )  >> .env
           ls -la
           cat .env
-          echo ${{ secrets.CONTENTFUL_SPACE_ID }}
+          echo ${{ secrets.CONTENTFUL_SPACE_ID }} | base64 -d
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
