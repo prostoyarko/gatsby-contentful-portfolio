@@ -21,15 +21,10 @@ const AboutPage = ({ data }) => (
               Interdum et malesuada fames ac ante.
             </h2>
             <div className="mt-4 leading-loose">
-              Curabitur non hendrerit dolor. Interdum et malesuada fames ac ante
-              ipsum primis in faucibus. Ut&nbsp;sapien ex, fringilla sed
-              consectetur et, pharetra eget lacus.
+              Just a sample text added by Yaroslav
               <br />
               <br />
-              Morbi sem leo, varius ut tempus et, tempor sit amet nibh.
-              Curabitur fermentum feugiat libero, sed egestas lorem aliquam et.
-              Praesent id mi purus. Morbi sem leo, varius ut tempus et, tempor
-              sit amet nibh.
+              Just another sample text added by Yaroslav
               <br />
               <br />
               I'm happy to hear from you:

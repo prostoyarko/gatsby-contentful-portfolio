@@ -701,7 +701,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/uy3h42sj0upk/2rXXfCq7OmHHL4rXDp4uMl/391516cf47d399b741aa23c371b295ff/iceland01.jpg",
+            "url": "//testwdesd.s3.eu-central-1.amazonaws.com/Reykjavik-Iceland.jpg",
             "details": {
               "size": 127727,
               "image": {
@@ -969,7 +969,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/uy3h42sj0upk/4Iqv52VORq3RHI1JUb6KxQ/0726f56b5cd387f859579069bc1bb55d/spain2.jpg",
+            "url": "//testwdesd.s3.eu-central-1.amazonaws.com/Spain.jpg",
             "details": {
               "size": 111508,
               "image": {
@@ -1036,7 +1036,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/uy3h42sj0upk/2pzRh27gIiOAHXkonEritC/008f0035cc2b9d129b8382c5a26b82f3/poland1.jpg",
+            "url": "//testwdesd.s3.eu-central-1.amazonaws.com/Warsaw-Old-Town-Warsaw-Poland.jpg",
             "details": {
               "size": 156784,
               "image": {
