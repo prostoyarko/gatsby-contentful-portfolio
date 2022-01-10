@@ -34,6 +34,7 @@ jobs:
           (echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"; echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"; echo "MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT" )| base64 -d  >> .env
           ls -la
           cat .env
+          base64 -i .env.production
           echo ${{ secrets.CONTENTFUL_SPACE_ID }} | base64 -d > .env.production
           cat .env.production
       # Runs a set of comman.env.productionds using the runners shell
