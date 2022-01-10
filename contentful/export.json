@@ -701,7 +701,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//testwdesd.s3.eu-central-1.amazonaws.com/Reykjavik-Iceland.jpg",
+            "url": "https:/testwdesd.s3.eu-central-1.amazonaws.com/Reykjavik-Iceland.jpg",
             "details": {
               "size": 127727,
               "image": {
