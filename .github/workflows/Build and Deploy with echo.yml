@@ -28,11 +28,15 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           MAILCHIMP_ENDPOINT: ${{ secrets.MAILCHIMP_ENDPOINT }}
+      - name: test echo
+        run: 'echo "$CONTENTFUL_SPACE_ID" > .key'
+        shell: bash
+        env:
+            CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
       - name: Create env file
         run: | 
-          (echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"; echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"; echo "MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT" ) >> .env
-          (echo "$CONTENTFUL_ACCESS_TOKEN") >> .key
           cat .key
+          (echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"; echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"; echo "MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT" ) >> .env
           ls -la
           cat .env
           echo ${{ secrets.CONTENTFUL_SPACE_ID }}
