@@ -18,6 +18,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: contentful/contentful-action@v1
+        env: # Set the secret as an input
+          SPACE_ID: ${{ secrets.SPACE_ID }}
+          MANAGEMENT_API_KEY: ${{ secrets.MANAGEMENT_API_KEY }}
+
       - uses: actions/checkout@v2
 
       - name: Setup Node.js environment
@@ -34,9 +39,6 @@ jobs:
           (echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"; echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"; echo "MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT" )  >> .env
           ls -la
           cat .env
-          base64 -i .env.production
-          echo ${{ secrets.CONTENTFUL_SPACE_ID }} | base64 -d > .env.production
-          cat .env.production
       # Runs a set of comman.env.productionds using the runners shell
       - name: Run a multi-line script
         run: |
