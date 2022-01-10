@@ -31,7 +31,7 @@ jobs:
       - name: Create env file
         run: | 
           (echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"; echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"; echo "MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT" ) >> .env
-          'echo "$CONTENTFUL_ACCESS_TOKEN" > key'
+          echo "$CONTENTFUL_ACCESS_TOKEN" > key
           ls -la
           cat .env
           echo ${{ secrets.CONTENTFUL_SPACE_ID }} | sed
